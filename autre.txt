@@ -1,2 +1,3 @@
 autre fichier texte
-Edition depuis git hub directemet
+Edition depuis git hub directement
+
