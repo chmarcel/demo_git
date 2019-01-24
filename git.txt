@@ -22,6 +22,9 @@ git commit -am "Dernière modif"
 git status
 
 git log : liste des commit
+git log -p : liste des commit avec les détails des modifs
+
+
 
 git checkout SHA2 : Se poistionner sur un commit donné
 git checkout master (revient sur la branche principale)
@@ -32,6 +35,8 @@ Modifier le commit du dernier message
 git commit --amend -m "Votre nouveau message"
 Annuler les derniers changement (avant commit)
 git reset --hard
+ou
+git checkout <nomfichier>
 
 pull request : demande de modif faite à d'autres repo
 
@@ -39,7 +44,9 @@ copier un repo sur sa machine
 git clone URLREPO (https ou ssh)
 
 Envoyer les modifs sur l'origine :
-git push origin master
+git push origin master (branche master)
+git push origin ma-branche (branche ma-branche)
+git push --all origin (toutes les branches)
 
 Récupérer des modifs depuis l'origine
 git pull origin master
@@ -56,6 +63,9 @@ Fusionner les modifs de la branche B vers la branche A
 git checkout brancheA
 git merge brancheB
 
+Effacer une branche
+git branch -d the_local_branch
+
 Qui a écrit cette ligne
 git blame <nom fichier>
 
@@ -71,9 +81,15 @@ git stash pop (supprime ce qu'il y avait dans la stash)
 ou
 git stash apply (pour garder ce qu'il y avait dans stash)
 
+
+Pour voir ce qui a changé avant le commit
+git diff
+ou 
+git diff <nomfichier>
+
 POur contribuer à un projet github public
 Aller sur le repo github
-Faire un fork (bouton) (cela copi vers son propre repo)
+Faire un fork (bouton) (cela copie vers son propre repo)
 clone en local
 creer une branche
 faire les modifs, commit et push de la branche
