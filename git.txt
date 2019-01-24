@@ -1,6 +1,7 @@
-git config core.sshCommand "ssh -i ~/.ssh/id_rsa_perso"
-git config user.name "chmarcel"
-git config user.email "chmarcel@free.fr"
+A faire sur le clonage dun depot github avant tout modif :
+ git config core.sshCommand "ssh -i ~/.ssh/id_rsa_perso"
+ git config user.name "chmarcel"
+ git config user.email "chmarcel@free.fr"
 
 
 
@@ -64,7 +65,11 @@ git checkout brancheA
 git merge brancheB
 
 Effacer une branche
-git branch -d the_local_branch
+git branch -d <nom branche>
+git push origin --delete <nom branche>
+
+Reprendre les modifs effectuée sur master sur une branche X créée avant les modifs
+Sur la branche x : git rebase master (uniquement si il n'y pas eu de push)
 
 Qui a écrit cette ligne
 git blame <nom fichier>
