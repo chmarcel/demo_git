@@ -1,24 +1,21 @@
-A faire sur le clonage dun depot github avant tout modif :
- git config core.sshCommand "ssh -i ~/.ssh/id_rsa_perso"
- git config user.name "chmarcel"
- git config user.email "chmarcel@free.fr"
+A faire dès qu'un depot github a été cloné en local (avant tout modif) :
+- **git config core.sshCommand "ssh -i ~/.ssh/id_rsa_perso"**
+- **git config user.name "chmarcel"**
+- **git config user.email "mon email"**
 
 
 
-activer un dossier comme repository Git, 
-il suffit de se placer dans ce dossier avec le Terminal puis d'utiliser la commande 
-git init
+activer un dossier comme repository Git :
+- Dans le dossier, exécuter **git init**
 
-Lorsque vous créez un fichier dans un repository, vous devez donc l'ajouter à l'index Git à l'aide de la commande 
-De même lorsqu'on modifie
-git add nomDeVotreFichier.extension
+Ajouter un fichier (après ajout ou modif) à l'index git avant un commit
+- **git add <nom_fichier>**
 
-Git d'enregistrer vos modifications en faisant un 
-git commit -m "Ajouté ma checklist-vacances.md (woohoo!)"
+Enregistrer les modifications
+- **git commit -m "Un message parlant"**
 
-Rajouter au commit automatiquement tous les fichiers déja dans l'index
-
-git commit -am "Dernière modif"
+Ou bien, les 2 opérations précédentes en simultané (si pas de fichier rajouté) :
+- **git commit -am "Dernière modif"**
 
 git status
 
@@ -52,21 +49,23 @@ git push --all origin (toutes les branches)
 Récupérer des modifs depuis l'origine
 git pull origin master
 
-BRANCHES
-Liste des branches :
+## BRANCHES
+### Liste des branches présentes en local :
 git branch
+### Créer une branche : 
+git branch ma-branche
+### Aller dans la branche : 
+git checkout ma-branche
+### Les 2 en même temps : 
+git checkout -b ma-branche
 
-Créer une branche : git branch ma-branche
-Aller dans la branche : git checkout ma-branche
-Les 2 en même temps : git checkout -b ma-branche
+### Fusionner les modifs de la branche B vers la branche A
+- **git checkout brancheA** (on va dans la branche A)
+- **git merge brancheB** (on fusionne la branche B dans la A)
 
-Fusionner les modifs de la branche B vers la branche A
-git checkout brancheA
-git merge brancheB
-
-Effacer une branche
-git branch -d <nom branche>
-git push origin --delete <nom branche>
+### Effacer une branche
+- **git branch -d <nom branche>** (branche locale)
+- **git push origin --delete <nom branche>** (branche distante)
 
 Reprendre les modifs effectuée sur master sur une branche X créée avant les modifs
 Sur la branche x : git rebase master (uniquement si il n'y pas eu de push)
