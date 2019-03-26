@@ -64,11 +64,12 @@ git checkout -b ma-branche
 - **git merge brancheB** (on fusionne la branche B dans la A)
 
 ### Effacer une branche
-- **git branch -d <nom branche>** (branche locale)
-- **git push origin --delete <nom branche>** (branche distante)
+- **git branch -d ma-branche** (branche locale)
+- **git push origin --delete ma-branche** (branche distante)
 
-Reprendre les modifs effectuée sur master sur une branche X créée avant les modifs
-Sur la branche x : git rebase master (uniquement si il n'y pas eu de push)
+### Reprendre les modifs effectuée sur master sur une branche X créée avant les modifs
+Sur la branche x : 
+git rebase master (uniquement si il n'y pas eu de push)
 
 Qui a écrit cette ligne
 git blame <nom fichier>
@@ -99,5 +100,14 @@ creer une branche
 faire les modifs, commit et push de la branche
 Sur le projet forké, faire compare et pull request
 
+
+AVant de pusher la branche :
+- Tout commiter
+- Retourner sur le master : **git checkout master**
+- **git status** et si il y du retard, faire un **git pull**
+- retourner sur la branche : **git checkout mabranche**
+- si il y avait du retard, faire un **git rebase master**
+- pousser la branche : ** git push origin mabrabche **
+- Récupérer l'URL pour faire la merge request
 
 
