@@ -41,13 +41,20 @@ pull request : demande de modif faite à d'autres repo
 copier un repo sur sa machine 
 git clone URLREPO (https ou ssh)
 
-Envoyer les modifs sur l'origine :
-git push origin master (branche master)
-git push origin ma-branche (branche ma-branche)
-git push --all origin (toutes les branches)
+## Dépot distant
+### Envoyer les modifs sur l'origine :
+- git push origin master (branche master)
+- git push origin ma-branche (branche ma-branche)
+- git push --all origin (toutes les branches)
 
-Récupérer des modifs depuis l'origine
-git pull origin master
+### Récupérer des modifs depuis l'origine - avec merge (branche master)
+- git pull origin master
+
+### Différence entre la branche master locale et distante
+- git diff master origin/master
+
+### Simplement récupérer la liste des modifs distantes
+- git fetch
 
 ## BRANCHES
 ### Liste des branches présentes en local :
@@ -107,7 +114,7 @@ AVant de pusher la branche :
 - **git status** et si il y du retard, faire un **git pull**
 - retourner sur la branche : **git checkout mabranche**
 - si il y avait du retard, faire un **git rebase master**
-- pousser la branche : ** git push origin mabrabche **
+- pousser la branche : **git push origin mabranche**
 - Récupérer l'URL pour faire la merge request
 
 
