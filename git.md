@@ -17,29 +17,29 @@ Enregistrer les modifications
 Ou bien, les 2 opérations précédentes en simultané (si pas de fichier rajouté) :
 - **git commit -am "Dernière modif"**
 
-git status
+- **git status**
 
-git log : liste des commit
-git log -p : liste des commit avec les détails des modifs
+liste des commit
+- **git log**
 
+liste des commit avec les détails des modifs
+- **git log -p**
 
-
-git checkout SHA2 : Se poistionner sur un commit donné
-git checkout master (revient sur la branche principale)
+Se positionner sur un commit donné
+- **git checkout SHA2**
 
 annuler un commit (commit inverse)
-git revert SHA2
-Modifier le commit du dernier message
-git commit --amend -m "Votre nouveau message"
-Annuler les derniers changement (avant commit)
-git reset --hard
-ou
-git checkout <nomfichier>
+- **git revert SHA2**
 
-pull request : demande de modif faite à d'autres repo
+Modifier le message du dernier commit
+- **git commit --amend -m "Votre nouveau message"**
+
+Annuler les derniers changement (avant commit)
+- **git reset --hard**
+- **git checkout nom_fichier**
 
 copier un repo sur sa machine 
-git clone URLREPO (https ou ssh)
+- **git clone URLREPO (https ou ssh)**
 
 ## Dépot distant
 ### Envoyer les modifs sur l'origine :
