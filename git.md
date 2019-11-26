@@ -56,6 +56,11 @@ copier un repo sur sa machine
 ### Simplement récupérer la liste des modifs distantes
 - git fetch
 
+### Merger une branche distante vers sa branche locale
+- git fetch
+- git checkout ma-branche
+- git merge origin/ma-branche
+
 ## BRANCHES
 ### Liste des branches présentes en local :
 git branch
